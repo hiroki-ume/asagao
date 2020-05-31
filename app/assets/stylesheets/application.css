@@ -71,6 +71,28 @@ aside#sidebar {
   font-size: 86%;
 }
 
+/* ヘッダー */
+header {border-top: 4px solid #6bb;}
+
+/* フッター */
+footer {
+  clear: both;
+  font: 11px Verdana;
+  color: #888;
+  padding: 8px 0;
+  border-top: 4px solid #6bb;
+  text-align: center;
+}
+
+/* メニューバー */
+nav.menubar {
+  padding: 2px;
+  background-color: #000;
+  color: #ccc;
+  font-size: 80%;
+  padding: 8px 16px;
+}
+
 /* メニューバーのリンク */
 nav.menubar a {text-decoration: none;}
 
@@ -79,3 +101,11 @@ nav.menubar a:link {color: #ccc;}
 
 /* メニューバーのリンク（訪問済み） */
 nav.menubar a:visited {color: #ccc;}
+
+/* メインコンテンツ */
+ul.toolbar,
+div.toolbar {
+  padding: 15px 0;
+  font-size: 90%;
+  text-align: right;
+}
