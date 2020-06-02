@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/vagrant/work/asagao/app/views/members/_body.html.erb:6 ActionView::CompiledTemplates#_app_views_members__body_html_erb___771165216190808559_70082659215220:
+
+     [1;34m1[0m: <table class="attr">
+     [1;34m2[0m:   <tr>
+     [1;34m3[0m:     <th>プロフィール画像</th>
+     [1;34m4[0m:     <td>
+     [1;34m5[0m:       <% binding.pry %>
+ =>  [1;34m6[0m: 
+     [1;34m7[0m:       <% if @member.profile_picture.attached? %>
+     [1;34m8[0m:         <%= image_tag @member.profile_picture.variant(resize: "128x128") %>
+     [1;34m9[0m:       <% end %>
+    [1;34m10[0m:     </td>
+    [1;34m11[0m:   </tr>
+
