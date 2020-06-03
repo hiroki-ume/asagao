@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-  get 'entries/index'
-  get 'entries/show'
-  get 'entries/new'
-  get 'entries/edit'
-  get 'passwords/edit'
-  get 'accounts/show'
-  get 'accounts/edit'
   root "top#index"
   get 'about' => "top#about", as: "about"
 
@@ -19,6 +12,10 @@ Rails.application.routes.draw do
   resource :password, only: [:show, :edit, :update]
 
   resources :articles
-  resources :entries
+  resources :entries do
+    resources :images, controller: "entry_images" do
+      patch :move_higher, :move_lower, on: :member
+    end
+  end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
