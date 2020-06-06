@@ -53,7 +53,7 @@
     </tr>
   <% end %>
 
-  <% if controller.kind_of?(MembersController) %>
+  <% if controller.kind_of?(Admin::MembersController) %>
     <tr>
       <th><%= Member.human_attribute_name(:administrator) %></th>
       <td><%= f.check_box :administrator, disabled: !current_member.administrator? %><%= f.label :administrator %></td>

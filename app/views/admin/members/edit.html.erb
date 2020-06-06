@@ -3,10 +3,10 @@
 <h1><%= @page_title %></h1>
 
 <div class="toolbar">
-  <%= link_to "会員の詳細に戻る", @member %>
+  <%= link_to "会員の詳細に戻る", [:admin, @member] %>
 </div>
 
-<%= form_for @member do |f| %>
+<%= form_for [:edit, @member] do |f| %>
   <%= render "shared/member_form", f: f %>
   <div><%= f.submit %></div>
 <% end %>
